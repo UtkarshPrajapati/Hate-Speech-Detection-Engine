@@ -63,6 +63,6 @@ from sklearn.metrics import accuracy_score as a_s
 print("Model Accuracy:- ",a_s(y_test,y_pred)*100,"%")
 
 #Try it yourself
-a="@kikiSTFU: I'll break that lil bitch neck nd won't even feel sorry bout it"
+a="@kikiSTFU: I'll break that lil bitch neck nd won't even feel sorry bout it" #Change value of variable to what you want to try it out
 a=cv.transform([a]).toarray()
 print("Result:- ",model.predict(a)[0])
