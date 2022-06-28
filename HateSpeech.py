@@ -1,5 +1,11 @@
 #Code created by Utkarsh Prajapati 
 
+#Downloading Packages
+!pip install pandas
+!pip install numpy
+!pip install scikit-learn
+!pip install nltk
+
 #Importing libraries
 import pandas as pd
 import numpy as np
