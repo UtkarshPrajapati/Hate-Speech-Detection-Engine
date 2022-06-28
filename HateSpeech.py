@@ -61,11 +61,18 @@ model=DecisionTreeClassifier()
 model.fit(X_train,y_train)
 y_pred=model.predict(X_test)
 
-#Evaluating Model Accuracy 
-from sklearn.metrics import accuracy_score as a_s
-print("Model Accuracy:- ",a_s(y_test,y_pred)*100,"%")
 
 #Try it yourself
-a="@kikiSTFU: I'll break that lil bitch neck nd won't even feel sorry bout it"
-a=cv.transform([a]).toarray()
-print("Result:- ",model.predict(a)[0])
+inp="@kikiSTFU: I'll break that lil bitch neck nd won't even feel sorry bout it"
+a=cv.transform([inp]).toarray()
+print("Input Text:- ",inp)
+print("Result:- ",model.predict(a)[0]) 
+print("Model Accuracy:- ",a_s(y_test,y_pred)*100,"%\n") #Evaluating Model Accuracy
+
+inp="a"
+while inp!="":
+    inp=input("Input Text:- ")
+    if inp!="":
+        a=cv.transform([inp]).toarray()
+        print("Result:- ",model.predict(a)[0])
+        print("Model Accuracy:- ",a_s(y_test,y_pred)*100,"%\n")
