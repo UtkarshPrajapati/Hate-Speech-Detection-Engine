@@ -1,10 +1,11 @@
 #Code created by Utkarsh Prajapati 
 
-#Downloading Packages
-!pip install pandas
-!pip install numpy
-!pip install scikit-learn
-!pip install nltk
+#Downloading Libraries
+import os
+os.system("pip install numpy")
+os.system("pip install pandas")
+os.system("pip install scikit-learn")
+os.system("pip install nltk")
 
 #Importing libraries
 import pandas as pd
