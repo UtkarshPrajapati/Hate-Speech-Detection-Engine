@@ -70,9 +70,9 @@ print("Result:- ",model.predict(a)[0])
 print("Model Accuracy:- ",a_s(y_test,y_pred)*100,"%\n") #Evaluating Model Accuracy
 
 inp="a"
-while inp!="":
+while inp!="exit":
     inp=input("Input Text:- ")
-    if inp!="":
+    if inp!="exit":
         a=cv.transform([inp]).toarray()
         print("Result:- ",model.predict(a)[0])
         print("Model Accuracy:- ",a_s(y_test,y_pred)*100,"%\n")
