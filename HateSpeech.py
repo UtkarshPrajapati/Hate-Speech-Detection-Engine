@@ -22,7 +22,7 @@ sw=set(nltk.corpus.stopwords.words("english"))
 stemmer=SnowballStemmer("english")
 
 #Reading Data from CSV Dataset and Filtering it
-data=pd.read_csv("tweets.csv")
+data=pd.read_csv("https://raw.githubusercontent.com/UtkarshPrajapati/Hate-Speech-Detection-Engine/main/tweets.csv")
 data["label"]=data["class"].map({0:"Hate Speech", 1: "Offensive Speech", 2: "No Hate and Offensive Speech"})
 data=data[["tweet","label"]]
 
@@ -63,6 +63,6 @@ from sklearn.metrics import accuracy_score as a_s
 print("Model Accuracy:- ",a_s(y_test,y_pred)*100,"%")
 
 #Try it yourself
-a="@kikiSTFU: I'll break that lil bitch neck nd won't even feel sorry bout it" #Change value of variable to what you want to try it out
+a="@kikiSTFU: I'll break that lil bitch neck nd won't even feel sorry bout it"
 a=cv.transform([a]).toarray()
 print("Result:- ",model.predict(a)[0])
